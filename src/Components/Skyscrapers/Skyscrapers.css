@@ -1,0 +1,14 @@
+.Skyscraper-table {
+  border-collapse: collapse;  
+}
+
+.Skyscraper-cell {
+  width: 2rem;
+  height: 2rem;  
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Skyscraper-value {
+  border: 1px solid black;
+}
