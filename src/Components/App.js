@@ -5,19 +5,18 @@ import logo from './logo.svg';
 import './App.css';
 import './Skyscrapers/Skyscrapers.css';
 
-// const clues = [
-//   2, 2, 1, 3,
-//   2, 2, 3, 1,
-//   1, 2, 2, 3,
-//   3, 2, 1, 3];
-const clues = Array.from({ length: 4 * 4 }, (x,i) => i + 1);
+const clues = [
+  2, 2, 1, 3,
+  2, 2, 3, 1,
+  1, 2, 2, 3,
+  3, 2, 1, 3];
+// const clues = Array.from({ length: 4 * 4 }, (x,i) => i + 1);
 
-const init = [
-  [0,0,0,0],
-  [0,0,0,0],
-  [0,0,0,0],
-  [0,0,0,0]
-]
+const values = {
+  "A1": "1",
+  "B3": "4",
+  "C1": ["2", "3"]
+};
 
 class App extends Component {
   render() {
@@ -29,7 +28,7 @@ class App extends Component {
         </header>
         <main className="App-content">
           <Clues clues={clues}>
-            <Skyscrapers values={init} />
+            <Skyscrapers values={values} />
           </Clues>          
         </main>
       </div>

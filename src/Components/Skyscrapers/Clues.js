@@ -8,11 +8,11 @@ const Clues = ({ clues, children }) => {
       <tbody>
         <tr>
           { Array.from({ length: sizeOuter }).map((x,i) => 
-            <td className="Skyscraper-cell">{i >= 1 && i <= sizeInner && clues[i-1]}</td>
+            <td className="Skyscraper-cell" key={i}>{i >= 1 && i <= sizeInner && clues[i-1]}</td>
           )}
         </tr>
         { Array.from({length:sizeInner}).map((r,ri) => 
-          <tr>
+          <tr key={ri}>
             <td className="Skyscraper-cell">{clues[4 * sizeInner - ri - 1]}</td>
             {ri === 0 && <td colSpan={sizeInner} rowSpan={sizeInner}>{children}</td>}
             <td className="Skyscraper-cell">{clues[sizeInner + ri]}</td>
@@ -20,7 +20,7 @@ const Clues = ({ clues, children }) => {
         )}
         <tr>
           { Array.from({ length: sizeOuter }).map((x,i) => 
-            <td className="Skyscraper-cell">{i >= 1 && i <= sizeInner && clues[3 * sizeInner - i]}</td>
+            <td className="Skyscraper-cell" key={i}>{i >= 1 && i <= sizeInner && clues[3 * sizeInner - i]}</td>
           )}
         </tr>
       </tbody>

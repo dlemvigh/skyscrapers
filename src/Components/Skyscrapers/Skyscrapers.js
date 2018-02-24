@@ -1,14 +1,20 @@
 import React from "react";
+import Cell from "./Cell";
+import {
+  rows, 
+  cols
+} from "../../Algorithm/Skyscrapers";
 
 const Skyscrapers = ({ values }) => {
-  const size = values.length / 4;
   return (
     <table className="Skyscraper-table">
       <tbody>
-        { values.map(row =>
-          <tr>
-            { row.map(x =>
-              <td className="Skyscraper-cell Skyscraper-value">{x > 0 && x}</td>
+        { rows.map(row =>
+          <tr key={row}>
+            { cols.map(col =>
+              <td className="Skyscraper-cell Skyscraper-value" key={col}>
+                <Cell row={row} col={col} values={values} />
+              </td>
             )}
           </tr>
         )}

@@ -12,3 +12,12 @@
 .Skyscraper-value {
   border: 1px solid black;
 }
+
+table.Skyscraper-tiny {
+  border-collapse: collapse;
+  width: 100%
+}
+
+table.Skyscraper-tiny td {
+  font-size: 0.5rem;
+}
